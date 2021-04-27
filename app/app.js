@@ -1174,7 +1174,7 @@ layer_country.addEventListener('change', function() {
                                   ['interpolate',['linear'],['get', layer_country_value],
                                   0, '#08306b',5, '#2171b5',10, '#6baed6',20, '#c6dbef',30, '#f7f7f7',40, '#e6f5d0',50, '#b8e186',60, '#7fbc41',70, '#4d9221',
                                 ]);
-                                $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Agricultiural Lands (% of land area)</p>"+
+                                $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Agricultural Lands (% of land area)</p>"+
                                 "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
                                 "<div><span class='square_pa'style='background-color: #2171b5'></span>5%</div>"+
                                 "<div><span class='square_pa'style='background-color: #6baed6'></span>10%</div>"+
@@ -1309,7 +1309,7 @@ $('.search_icon').click(function() {
 
 
 $('.country_select').click(function() {
-  
+ $('.mapboxgl-popup-close-button').click();
 
   if($('.country_select').hasClass('clickedtool')){
     $('.country_select').removeClass('clickedtool');
@@ -1377,6 +1377,7 @@ $('.country_select').click(function() {
 
 $('.ecoregion_select').click(function() {
 
+  $('.mapboxgl-popup-close-button').click();
   if($('.ecoregion_select').hasClass('clickedtool')){
     $('.ecoregion_select').removeClass('clickedtool');
     map.setFilter("ecoregion_master_202104", ["in", "id", "xxx"]);
@@ -1436,7 +1437,8 @@ $('.ecoregion_select').click(function() {
 
 
 $('.pa_select').click(function() {
-  $('#geocoder').show();
+  $('.mapboxgl-popup-close-button').click();
+    $('#geocoder').show();
   if($('.pa_select').hasClass('clickedtool')){
     $('.pa_select').removeClass('clickedtool');
     map.setFilter("dopa_geoserver_wdpa_master_202101_o1", ["in", "id", "xxx"]);
@@ -1809,7 +1811,7 @@ rangeSlidercountry();
         
                               $.each(this.points, function(i, point) {
                                   if(point.series.name == "Country Average"){
-                                      s.push('<span style="color:rgb(130, 162, 145);font-weight:bold;">'+ point.key +' <br>'+ point.series.name +' : '+
+                                      s.push('<span style="color:rgb(143, 189, 87);font-weight:bold;">'+ point.key +' <br>'+ point.series.name +' : '+
                                       point.y +'<span>');
                                   }
                                   else{
@@ -1848,7 +1850,7 @@ rangeSlidercountry();
                           },
                           name: 'Country Average',
                           data: country_avg,
-                          color: '#d6eab9'
+                          color: '#9aa689'
                       },
                       {
                           type: 'line',
@@ -2105,7 +2107,7 @@ rangeSlidercountry();
       
                                 $.each(this.points, function(i, point) {
                                     if(point.series.name == "Country Average"){
-                                        s.push('<span style="color:rgb(130, 162, 145);font-weight:bold;">'+ point.key +' <br>'+ point.series.name +' : '+
+                                        s.push('<span style="color:rgb(143, 189, 87);font-weight:bold;">'+ point.key +' <br>'+ point.series.name +' : '+
                                         point.y +'<span>');
                                     }
                                     else{
@@ -2144,7 +2146,7 @@ rangeSlidercountry();
                             },
                             name: 'Country Average',
                             data: country_avg,
-                            color: '#d6eab9'
+                            color: '#9aa689'
                         },
                         {
                             type: 'line',
@@ -2380,7 +2382,7 @@ rangeSlidercountry();
         '</b></i><br><i>Status <b class = "higlightpa">'+e.features[0].properties.status+
         '</b></i><br><i>Status Year <b class = "higlightpa">'+e.features[0].properties.status_yr+
         '</b></i><br><i>IUCN Category <b class = "higlightpa">'+e.features[0].properties.iucn_cat+
-        '</b></i><br><i>Reported Area <b class = "higlightpa">'+e.features[0].properties.rep_area+ ' km<sup>2</sup>'+
+        '</b></i><br><i>Reported Area <b class = "higlightpa">'+(e.features[0].properties.rep_area).toFixed(2)+ ' km<sup>2</sup>'+
         '</b></i><br><i>Designation <b class = "higlightpa"> '+e.features[0].properties.desig_eng+'</b></i>')
         .addTo(map);
         });
@@ -2410,7 +2412,7 @@ rangeSlidercountry();
           '</b></i><br><i>Status <b class = "higlightpa">'+e.features[0].properties.status+
           '</b></i><br><i>Status Year <b class = "higlightpa">'+e.features[0].properties.status_yr+
           '</b></i><br><i>IUCN Category <b class = "higlightpa">'+e.features[0].properties.iucn_cat+
-          '</b></i><br><i>Reported Area <b class = "higlightpa">'+(e.features[0].properties.rep_area).toLocaleString()+ ' km<sup>2</sup>'+
+          '</b></i><br><i>Reported Area <b class = "higlightpa">'+(e.features[0].properties.rep_area).toFixed(2)+ ' km<sup>2</sup>'+
           '</b></i><br><i>Designation <b class = "higlightpa"> '+e.features[0].properties.desig_eng+'</b></i>')
           .addTo(map);
         
