@@ -2620,11 +2620,11 @@ rangeSlidercountry();
             popup.setLngLat(e.lngLat)
             .setHTML('<a href="https://dopa-explorer.jrc.ec.europa.eu/country/'+e.features[0].properties.iso2_digit+'" target="_blank">'+e.features[0].properties.name_c+'</a><br><div class = "marine_eco"></div>'+
             " <ul><li>"+
-            "<div><span class = 'coll_item_title' > Terrestrial Protection ("+e.features[0].properties.prot_terr_perc_ind.toLocaleString()+")</span>"+
+            "<div><span class = 'coll_item_title' > Terrestrial Protection ("+Math.round(( e.features[0].properties.prot_terr_perc_ind)*100)/100+")</span>"+
               "<div id='progressbar'><div style='width:"+e.features[0].properties.prot_terr_perc_ind+"%'></div></div>"+
-              "<span class = 'coll_item_title' > Marine Protection(" +prot_mar_perc_ind.toLocaleString()+")</span>"+
+              "<span class = 'coll_item_title' > Marine Protection(" +Math.round(( e.features[0].properties.prot_mar_perc_ind)*100)/100+")</span>"+
               "<div id='progressbar'><div style='width:" +prot_mar_perc_ind+"%'></div></div>"+
-              "<span class = 'coll_item_title' > Terrestrial Connectivity ("+e.features[0].properties.protconn_ind.toLocaleString()+")</span>"+
+              "<span class = 'coll_item_title' > Terrestrial Connectivity ("+Math.round(( e.features[0].properties.protconn_ind)*100)/100+")</span>"+
               "<div id='progressbar'><div style='width:"+e.features[0].properties.protconn_ind+"%'></div></div>"+
               "</div></li></ul>")
             .addTo(map);
@@ -2673,9 +2673,9 @@ rangeSlidercountry();
             new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML('<a href="https://dopa-explorer.jrc.ec.europa.eu/ecoregion/'+e.features[0].properties.id+'" target="_blank">'+e.features[0].properties.eco_name+'</a><br><div class = "marine_eco">'+marine+'</div>'+
-            "<div><span class = 'coll_item_title' >Protection ("+e.features[0].properties.protection.toLocaleString()+")</span>"+
+            "<div><span class = 'coll_item_title' >Protection ("+ Math.round(( e.features[0].properties.protection)*100)/100 +")</span>"+
             "<div id='progressbar'><div style='width:"+e.features[0].properties.protection+"%'></div></div>"+
-            "<span class = 'coll_item_title' > Terrestrial Connectivity ("+e.features[0].properties.connect.toLocaleString()+")</span>"+
+            "<span class = 'coll_item_title' > Terrestrial Connectivity ("+ Math.round(( e.features[0].properties.connect)*100)/100 +")</span>"+
             "<div id='progressbar'><div style='width:"+e.features[0].properties.connect+"%'></div></div>"+
             "</div></li></ul>")
             .addTo(map);
@@ -2713,9 +2713,9 @@ rangeSlidercountry();
               map.getCanvas().style.cursor = "pointer";
               popup.setLngLat(e.lngLat) 
               .setHTML('<a href="https://dopa-explorer.jrc.ec.europa.eu/ecoregion/'+e.features[0].properties.id+'" target="_blank">'+e.features[0].properties.eco_name+'</a><br><div class = "marine_eco">'+marine+'</div>'+
-              "<div><span class = 'coll_item_title' >Protection ("+e.features[0].properties.protection.toLocaleString()+")</span>"+
+              "<div><span class = 'coll_item_title' >Protection ("+Math.round(( e.features[0].properties.protection)*100)/100+")</span>"+
               "<div id='progressbar'><div style='width:"+e.features[0].properties.protection+"%'></div></div>"+
-              "<span class = 'coll_item_title' > Terrestrial Connectivity ("+e.features[0].properties.connect.toLocaleString()+")</span>"+
+              "<span class = 'coll_item_title' > Terrestrial Connectivity ("+Math.round(( e.features[0].properties.connect)*100)/100+")</span>"+
               "<div id='progressbar'><div style='width:"+e.features[0].properties.connect+"%'></div></div>"+
               "</div></li></ul>")
               .addTo(map);
