@@ -2377,7 +2377,7 @@ rangeSlidercountry();
 
         new mapboxgl.Popup()
         .setLngLat(e.lngLat)
-        .setHTML('<a href="https://dopa.gis-ninja.eu/wdpa/'+e.features[0].properties.wdpaid+'" target="_blank">'+e.features[0].properties.name+
+        .setHTML('<a href="https://dopa-explorer.jrc.ec.europa.eu/wdpa/'+e.features[0].properties.wdpaid+'" target="_blank">'+e.features[0].properties.name+
         '</a><br><i>WDPA ID <b class = "higlightpa">'+e.features[0].properties.wdpaid+
         '</b></i><br><i>Status <b class = "higlightpa">'+e.features[0].properties.status+
         '</b></i><br><i>Status Year <b class = "higlightpa">'+e.features[0].properties.status_yr+
@@ -2407,7 +2407,7 @@ rangeSlidercountry();
           map.on("mousemove", "dopa_geoserver_wdpa_master_202101_o1", function (e) {
             map.setFilter("wdpa_high", ["in", "wdpaid", e.features[0].properties.wdpaid]);
           map.getCanvas().style.cursor = "pointer";
-          popup.setLngLat(e.lngLat)         .setHTML('<a href="https://dopa.gis-ninja.eu/wdpa/'+e.features[0].properties.wdpaid+'" target="_blank">'+e.features[0].properties.name+
+          popup.setLngLat(e.lngLat)         .setHTML('<a href="https://dopa-explorer.jrc.ec.europa.eu/wdpa/'+e.features[0].properties.wdpaid+'" target="_blank">'+e.features[0].properties.name+
           '</a><br><i>WDPA ID <b class = "higlightpa">'+e.features[0].properties.wdpaid+
           '</b></i><br><i>Status <b class = "higlightpa">'+e.features[0].properties.status+
           '</b></i><br><i>Status Year <b class = "higlightpa">'+e.features[0].properties.status_yr+
@@ -2500,7 +2500,7 @@ rangeSlidercountry();
 
           $('#pa_stats').html(
           "<div>"+
-          "<div id='c_title'><a href='https://dopa.gis-ninja.eu/country/"+e.features[0].properties.iso2_digit+"' target='_blank'>"+e.features[0].properties.name_c+"</a><br><br></div>"+
+          "<div id='c_title'><a href='https://dopa-explorer.jrc.ec.europa.eu/country/"+e.features[0].properties.iso2_digit+"' target='_blank'>"+e.features[0].properties.name_c+"</a><br><br></div>"+
           "<div id='p_title'>Protection & Connectivity</div>"+
           "<span class = 'coll_item_title' >Overall Protection ("+e.features[0].properties.prot_perc_ind.toLocaleString()+"% Rank: "+e.features[0].properties.prot_perc_rank+")</span>"+
           "<a class='btn modal-trigger' href='#modal-overall_protection'><span class='material-icons'>info</span></a>"+
@@ -2618,7 +2618,7 @@ rangeSlidercountry();
               prot_mar_perc_ind = prot_mar_perc_ind
             }
             popup.setLngLat(e.lngLat)
-            .setHTML('<a href="https://dopa.gis-ninja.eu/country/'+e.features[0].properties.iso2_digit+'" target="_blank">'+e.features[0].properties.name_c+'</a><br><div class = "marine_eco"></div>'+
+            .setHTML('<a href="https://dopa-explorer.jrc.ec.europa.eu/country/'+e.features[0].properties.iso2_digit+'" target="_blank">'+e.features[0].properties.name_c+'</a><br><div class = "marine_eco"></div>'+
             " <ul><li>"+
             "<div><span class = 'coll_item_title' > Terrestrial Protection ("+e.features[0].properties.prot_terr_perc_ind.toLocaleString()+")</span>"+
               "<div id='progressbar'><div style='width:"+e.features[0].properties.prot_terr_perc_ind+"%'></div></div>"+
@@ -2672,7 +2672,7 @@ rangeSlidercountry();
 
             new mapboxgl.Popup()
             .setLngLat(e.lngLat)
-            .setHTML('<a href="https://dopa.gis-ninja.eu/ecoregion/'+e.features[0].properties.id+'" target="_blank">'+e.features[0].properties.eco_name+'</a><br><div class = "marine_eco">'+marine+'</div>'+
+            .setHTML('<a href="https://dopa-explorer.jrc.ec.europa.eu/ecoregion/'+e.features[0].properties.id+'" target="_blank">'+e.features[0].properties.eco_name+'</a><br><div class = "marine_eco">'+marine+'</div>'+
             "<div><span class = 'coll_item_title' >Protection ("+e.features[0].properties.protection.toLocaleString()+")</span>"+
             "<div id='progressbar'><div style='width:"+e.features[0].properties.protection+"%'></div></div>"+
             "<span class = 'coll_item_title' > Terrestrial Connectivity ("+e.features[0].properties.connect.toLocaleString()+")</span>"+
@@ -2712,7 +2712,7 @@ rangeSlidercountry();
                 }
               map.getCanvas().style.cursor = "pointer";
               popup.setLngLat(e.lngLat) 
-              .setHTML('<a href="https://dopa.gis-ninja.eu/ecoregion/'+e.features[0].properties.id+'" target="_blank">'+e.features[0].properties.eco_name+'</a><br><div class = "marine_eco">'+marine+'</div>'+
+              .setHTML('<a href="https://dopa-explorer.jrc.ec.europa.eu/ecoregion/'+e.features[0].properties.id+'" target="_blank">'+e.features[0].properties.eco_name+'</a><br><div class = "marine_eco">'+marine+'</div>'+
               "<div><span class = 'coll_item_title' >Protection ("+e.features[0].properties.protection.toLocaleString()+")</span>"+
               "<div id='progressbar'><div style='width:"+e.features[0].properties.protection+"%'></div></div>"+
               "<span class = 'coll_item_title' > Terrestrial Connectivity ("+e.features[0].properties.connect.toLocaleString()+")</span>"+
