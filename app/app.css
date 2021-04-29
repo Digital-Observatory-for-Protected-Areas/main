@@ -1332,10 +1332,10 @@ div.mapboxgl-popup-content > i
   
   }
   #main_tools > div > div.col.s12.m6.l3.icon_custom.layers_icons > a > span{
-    font-size: 1vw;
+    font-size: 17px;
   }
   #main_tools > div > div.col.s12.m6.l3.icon_custom.layers_icon > a > span{
-    font-size: 1vw;
+    font-size: 17pz;
   }
   .modal-content {
     position: relative;
