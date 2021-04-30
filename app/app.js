@@ -144,7 +144,7 @@ var bounds = [
 
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/satellite-streets-v11',
+    style: 'mapbox://styles/mapbox/light-v10',
     center: [15, 22], // starting position[35.890, -75.664]
     zoom: 2.09, // starting zoom
     hash: true,
@@ -157,7 +157,7 @@ var map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl());
 
-map.scrollZoom.disable();
+
 
 $('.all_tools').click(function() {
   $('.pa_select').toggle();
@@ -165,7 +165,7 @@ $('.all_tools').click(function() {
   $('.ecoregion_select').toggle();
   $('.live_select').toggle();
   $('.search_icon').toggle();
-  map.scrollZoom.enable();
+ 
 })
 
 
