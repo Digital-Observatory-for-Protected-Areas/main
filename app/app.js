@@ -2085,7 +2085,7 @@ rangeSlidercountry();
                             color: '#1f2325',
                             font: '16px "Montserrat"'
                          },
-                            text: 'Biodiverty Variables and Human Pressures'
+                            text: 'Biodiversity Variables and Human Pressures'
                         },
                         subtitle: {
                             text: ""
@@ -2312,7 +2312,7 @@ rangeSlidercountry();
                             color: '#1f2325',
                             font: '16px "Montserrat"'
                          },
-                            text: 'Marine Biodiverty Variables'
+                            text: 'Marine Biodiversity Variables'
                         },
                         subtitle: {
                             text: ""
